@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+    h1 Designers Clothes
+    form(action="/products/edit/"+product._id,method="post")
+        .form-group
+            label(for="name") Dress Type
+            input#name(type="text", class="form-control", name="name",value=product.name)
+        .form-group
+            label(for="contact") outlet name
+            input#contact(type="text", class="form-control", name="contact",value=product.contact)
+        .form-group
+            label(for="city") Cloth stuff
+            input#city(type="text", class="form-control", name="city",value=product.city)
+        .form-group
+            label(for="service") Price
+            input#service(type="text", class="form-control", name="service",value=product.service)
+        input(type="submit", class="btn btn-info")
+        
